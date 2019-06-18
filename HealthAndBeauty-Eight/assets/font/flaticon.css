@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 14/06/2019 07:30
+  	Creation date: 18/06/2019 10:19
   	*/
 
 @font-face {
@@ -32,16 +32,18 @@ margin-left: 20px;
 
 .flaticon-right-arrow:before { content: "\f100"; }
 .flaticon-last-track-left-arrow:before { content: "\f101"; }
-.flaticon-hairstyle:before { content: "\f102"; }
-.flaticon-hairdryer:before { content: "\f103"; }
-.flaticon-scissors-cutting-hair:before { content: "\f104"; }
-.flaticon-female-hairs:before { content: "\f105"; }
-.flaticon-beard:before { content: "\f106"; }
-.flaticon-hair-dryer:before { content: "\f107"; }
-.flaticon-hair:before { content: "\f108"; }
-.flaticon-jacket:before { content: "\f109"; }
-.flaticon-waist:before { content: "\f10a"; }
-.flaticon-bow:before { content: "\f10b"; }
-.flaticon-phone-call:before { content: "\f10c"; }
-.flaticon-mail-send:before { content: "\f10d"; }
-.flaticon-map:before { content: "\f10e"; }
+.flaticon-makeup:before { content: "\f102"; }
+.flaticon-phone-call:before { content: "\f103"; }
+.flaticon-mail-send:before { content: "\f104"; }
+.flaticon-map:before { content: "\f105"; }
+.flaticon-makeup-1:before { content: "\f106"; }
+.flaticon-manager:before { content: "\f107"; }
+.flaticon-email-filled-closed-envelope:before { content: "\f108"; }
+.flaticon-phone-receiver:before { content: "\f109"; }
+.flaticon-pin:before { content: "\f10a"; }
+.flaticon-signing-the-contract:before { content: "\f10b"; }
+.flaticon-send-button:before { content: "\f10c"; }
+.flaticon-placeholder:before { content: "\f10d"; }
+.flaticon-language:before { content: "\f10e"; }
+.flaticon-e-mail-envelope:before { content: "\f10f"; }
+.flaticon-smartphone:before { content: "\f110"; }
