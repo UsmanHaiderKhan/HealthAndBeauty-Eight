@@ -2,7 +2,7 @@
 /*================== Read More Text ==================*/
 
 $(function () {
-    var showChar = 750;
+    var showChar = 550;
     var moretext = "Read More";
     var lesstext = "Read Less";
     $('.comments-space').each(function () {
@@ -15,7 +15,7 @@ $(function () {
                 hide_content +
                 '</span>' +
 
-                '<a href="" class="morelink btn btn-read-more mt-30 mb-3 link-style " style="display:block;">' +
+                '<a href="" class="morelink btn-me btn-read-more mt-30 mb-3 link-style " style="display:block;">' +
                 moretext +
                 '</a>' + '</span>';;
 
@@ -40,7 +40,7 @@ $(function () {
 
 
 $(function () {
-    var showChar = 253;
+    var showChar = 180;
     var moretext = "Read More +";
     var lesstext = "Read Less -";
     $('.comments-spaces').each(function () {
@@ -53,7 +53,7 @@ $(function () {
                 hide_content +
                 '</span>' +
 
-                '<a href="" class="morelinks read-text mt-30 mb-3 link-style " style="display:block;">' +
+                '<a href="" class="morelinks read-text mt-15 mb-3 link-style" style="display:block;">' +
                 moretext +
                 '</a>' + '</span>';;
 
@@ -77,9 +77,9 @@ $(function () {
 });
 
 $(function () {
-    var showChar = 650;
-    var moretext = "Read More";
-    var lesstext = "Read Less";
+    var showChar = 350;
+    var moretext = "Read More +";
+    var lesstext = "Read Less -";
     $('.comments-spacess').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
@@ -90,7 +90,7 @@ $(function () {
                 hide_content +
                 '</span>' +
 
-                '<a href="" class="morelinkss btn btn-read-more mt-30 mb-3 link-style " style="display:block;">' +
+                '<a href="" class="morelinkss read-text mt-30 mb-3 link-style " style="display:block;">' +
                 moretext +
                 '</a>' + '</span>';;
 
@@ -138,7 +138,7 @@ $(function () {
 $(document).ready(function () {
 
     $('.loadMore').loadMoreResults({
-        displayedItems: 3,
+        displayedItems: 6,
         showItems: 3
     });
 
@@ -150,43 +150,43 @@ $(document).ready(function () {
 $(function () {
     $('#owl-one').owlCarousel({
         loop: true,
-        margin: 24,
+        margin: 0,
         dots: false,
-        nav: true,
-        slideBy: 1,
-        item: 1,
-        navText: ["<i class='flaticon-last-track-left-arrow'> </i>", "<i class='flaticon-right-arrow'> </i>"],
+        nav: false,
+        slideBy: 4,
+        item: 4,
+
         responsiveClass: true,
         responsive: {
             0: {
                 items: 1,
                 dots: false,
-                nav: true,
+                nav: false,
             },
             400: {
                 items: 1,
                 dots: false,
-                nav: true,
+                nav: false,
             },
             600: {
-                items: 1,
+                items: 2,
                 dots: false,
-                nav: true
+                nav: false,
             },
             768: {
-                items: 1,
+                items: 3,
                 dots: false,
-                nav: true
+                nav: false,
             },
             830: {
-                items: 1,
+                items: 4,
                 dots: false,
-                nav: true
+                nav: false,
             },
             1000: {
-                items: 1,
+                items: 4,
                 dots: false,
-                nav: true
+                nav: false,
             }
         }
     });
@@ -256,10 +256,10 @@ $(function () {
 
 /*===================== Another Load More Script ======================*/
 $(function () {
-    $(".no-display").slice(0, 6).show();
+    $(".no-display").slice(0, 8).show();
     $("#load-more").on('click', function (e) {
         e.preventDefault();
-        $(".no-display:hidden").slice(0, 3).slideDown();
+        $(".no-display:hidden").slice(0, 4).slideDown();
         if ($(".no-display:hidden").length == 0) {
             $("#load-more").fadeOut('slow');
 
