@@ -23,7 +23,7 @@
     var defaults = {
         exclude: [],
         excludeWithin: [],
-        offset: -95,
+        offset: -116,
 
         // one of 'top' or 'left'
         direction: 'top',

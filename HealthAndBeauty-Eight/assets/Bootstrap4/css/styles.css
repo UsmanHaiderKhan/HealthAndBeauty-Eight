@@ -1,4 +1,4 @@
-﻿/*================================= 
+﻿/*=================================
         Font-Family's Start
   =================================*/
 @font-face {
@@ -22,7 +22,7 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/*================================= 
+/*=================================
     Navbar Section Styling
   =================================*/
 
@@ -57,6 +57,7 @@ html, body {
 }
 /*Nav DEsgin End*/
 #home {
+    margin-top: 112px;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -115,7 +116,6 @@ html, body {
 
     .active .nav-link::after {
         content: '';
-        content: '';
         position: absolute;
         background: #dfba9f;
         width: 50%;
@@ -141,7 +141,7 @@ html, body {
 }
 
 .content-setting {
-    padding: 170px 0 100px 0;
+    padding: 170px 0 40px 0;
 }
 
 #home .main-banner-text {
@@ -172,9 +172,7 @@ html, body {
     line-height: 56px;
     border-radius: 0 !important;
     color: #000000 !important;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(216, 216, 216);
+    border: 1px solid #d8d8d8;
     background-color: rgb(240, 163, 104);
     text-transform: uppercase;
     font-weight: bold;
@@ -197,7 +195,6 @@ html, body {
     padding: 0.375rem 1rem;
     font-size: 1rem;
     border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 
@@ -210,6 +207,7 @@ html, body {
     height: 3px;
     bottom: 28px;
     left: 13px;
+    transition: all .4s ease-in-out;
 }
 
 .btn-read-more:hover::before {
@@ -257,8 +255,44 @@ html, body {
     box-shadow: 2.5px 4.33px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
+#home .owl-dots {
+    counter-reset: dots;
+}
 
-/*================================= 
+#home .owl-dot:before {
+    counter-increment: dots;
+    content: '0' counter(dots);
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Kalinga Bold';
+}
+
+#home .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+    position: absolute;
+    right: -75px;
+    top: 190px;
+}
+
+#home .owl-theme .owl-dots .owl-dot {
+    display: flex !important;
+    margin-top: 19px;
+}
+
+    #home .owl-theme .owl-dots .owl-dot.active::before {
+        position: absolute;
+        background: #000000;
+        height: 2px;
+        width: 90%;
+        left: -12px;
+        transform: rotate(-45deg);
+        color: #ee8a3e;
+    }
+
+    #home .owl-theme .owl-dots .owl-dot span {
+        background: transparent;
+    }
+/*=================================
        Abuot Section Styling
   =================================*/
 #about {
@@ -339,7 +373,6 @@ html, body {
     padding: 0.375rem 1rem;
     font-size: 1rem;
     border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-contact::before {
@@ -350,6 +383,7 @@ html, body {
     height: 3px;
     bottom: 28px;
     left: 13px;
+    transition: all 0.6s ease-in-out;
 }
 
 .btn-contact:hover::before {
@@ -361,7 +395,7 @@ html, body {
     text-align: center;
 }
 
-/*================================= 
+/*=================================
        Feature Section Styling
   =================================*/
 .feature-heading {
@@ -374,6 +408,8 @@ html, body {
 }
 
 .feature-desc {
+    line-height: 32px;
+    letter-spacing: .3px;
     font-size: 17px;
     color: #000000;
     font-weight: bold;
@@ -393,7 +429,7 @@ html, body {
 
 .overlay {
     position: absolute;
-    bottom: -1px;
+    bottom: -3px;
     left: 10px;
     right: 0;
     border-bottom: none !important;
@@ -429,6 +465,7 @@ html, body {
     background: #f0a368;
     padding: 18px 0 9px 0;
     text-align: center;
+    z-index: 99;
 }
 
 .card:hover .card-footer-bg-color {
@@ -449,7 +486,7 @@ html, body {
 }
 
 .service-desc {
-    font-size: 14px;
+    font-size: 15px;
     color: #000000;
     font-weight: bold;
     font-family: 'Kalinga Bold';
@@ -525,6 +562,14 @@ html, body {
     height: 3px;
     bottom: 28px;
     left: 13px;
+    transition: all .4s ease-in-out;
+}
+
+.swip-text {
+    font-size: 15px;
+    color: #ffffff;
+    font-family: 'Kalinga Bold';
+    text-align: right;
 }
 
 #feature .btn-load-me:hover::before {
@@ -535,11 +580,11 @@ html, body {
     transition: all .6s ease;
     text-align: center;
 }
-/*================================= 
+/*=================================
       Gallery section Styling
   =================================*/
 #gallery {
-    padding: 60px 0;
+    padding: 60px 0 2px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -560,7 +605,7 @@ html, body {
     font-family: 'Kalinga Bold';
 }
 
-/*================================= 
+/*=================================
       Team Section Styling
   =================================*/
 #team .gallery-text {
@@ -598,7 +643,7 @@ html, body {
 
 #team .overlay {
     position: absolute;
-    bottom: -1px;
+    bottom: -3px;
     left: 15px;
     right: 0;
     border-bottom: none !important;
@@ -635,12 +680,12 @@ html, body {
     color: #000000;
 }
 
-/*================================= 
+/*=================================
        Contact section Styling
   =================================*/
 .contact-text {
-    font-size: 27px;
-    color: #ffffff;
+    font-size: 40px;
+    color: #000000;
     font-family: 'Prata', serif;
     font-weight: 400;
     line-height: 1;
@@ -648,10 +693,21 @@ html, body {
 }
 
 #contact .contact-desc {
+    letter-spacing: .3px;
     font-size: 18px;
     color: #000000;
     font-weight: bold;
     font-family: 'Kalinga Bold';
+    line-height: 32px;
+}
+
+.connect-text {
+    font-size: 27px;
+    color: #ffffff;
+    font-family: 'Prata', serif;
+    font-weight: 400;
+    line-height: 1;
+    text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.75);
 }
 
 .bg-color-black {
@@ -815,7 +871,7 @@ html, body {
     font-family: 'Kalinga Bold';
 }
 
-/*================================= 
+/*=================================
           Read More Styling
   =================================*/
 .comments-space {
@@ -1520,7 +1576,7 @@ button:focus {
         }
 /*------ Scrolling Css --------*/
 #feature .comments-spaces {
-    height: 158px;
+    height: 173px;
     overflow: auto;
 }
     /* width */
@@ -1546,7 +1602,7 @@ button:focus {
         }
 /*---------------------------*/ /*------ Scrolling Css --------*/
 #team .comments-spacess {
-    height: 240px;
+    height: 288px;
     overflow: auto;
 }
     /* width */
@@ -1556,19 +1612,19 @@ button:focus {
 
     /* Track */
     #team .comments-spacess::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px #392bf1;
+        box-shadow: inset 0 0 5px #f0a368;
         border-radius: 20px;
     }
 
     /* Handle */
     #team .comments-spacess::-webkit-scrollbar-thumb {
-        background: #392bf1;
+        background: #f0a368;
         border-radius: 20px;
     }
 
         /* Handle on hover */
         #team .comments-spacess::-webkit-scrollbar-thumb:hover {
-            background: #392bf1;
+            background: #f0a368;
         }
 /*================ Media Query ===============*/
 @media screen and (max-width: 1500px) {
@@ -1578,41 +1634,697 @@ button:focus {
 }
 
 @media screen and (max-width: 1024px) {
+    .nav-item {
+        padding: 0px 9px 0 8px;
+    }
+
+    .navbar-brand {
+        margin-right: -13rem;
+        margin-left: 0.4%;
+    }
+
+    .navbar-nav {
+        margin-left: 284px;
+    }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+        }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        top: 158px;
+    }
+
+    .border-position {
+        padding: 29px 184px;
+    }
+
+    #home .main-banner-text {
+        font-size: 40px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        right: -55px;
+    }
+
+    .about-text {
+        font-size: 28px;
+    }
+
+    .about-desc-text {
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        line-height: 26px;
+    }
+
+    .qoutes-text {
+        font-size: 26px;
+    }
+
+    .feature-heading {
+        font-size: 30px;
+    }
+
+    .feature-desc {
+        line-height: 28px;
+        letter-spacing: .3px;
+        font-size: 16px;
+    }
+
+    #feature .comments-spaces {
+        height: 180px;
+    }
+
+    .gallery-text {
+        font-size: 30px;
+    }
+
+    .gallery-desc {
+        font-size: 16px;
+    }
+
+    #team .gallery-text {
+        font-size: 30px;
+    }
+
+    #team .gallery-desc {
+        font-size: 16px;
+    }
+
+    #team .comments-spacess {
+        height: 282px;
+    }
+
+    .contact-text {
+        font-size: 30px;
+    }
+
+    #contact .contact-desc {
+        letter-spacing: .3px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .connect-text {
+        font-size: 22px;
+    }
+
+    #contact .contact-info {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 900px) {
+    .navbar {
+        padding: 6px 0px 6px 0px;
+    }
+
+    .menu-bg-color {
+        background: #000000;
+        height: auto;
+    }
+
+    .navbar-brand {
+        margin-right: 0rem;
+        margin-left: 3.4%;
+    }
+
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    #home {
+        margin-top: 90px;
+    }
+
+        #home .main-banner-text {
+            font-size: 30px;
+        }
+
+        #home .comments-space {
+            height: 332px;
+        }
+
+        #home .main-banner-desc {
+            font-size: 16px;
+        }
+
+    .mt--95 {
+        margin-top: -22px;
+    }
+
+
+
+    .btn-read-more {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 39px;
+    }
+
+        .btn-read-more::before {
+            width: 19%;
+            bottom: 22px;
+        }
+
+    .border-position {
+        padding: 29px 130px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        right: -51px;
+        top: 82px;
+    }
+
+    .feature-heading {
+        font-size: 26px;
+    }
+
+    .feature-desc {
+        line-height: 23px;
+    }
+
+    .gallery-text {
+        font-size: 24px;
+    }
+
+    #team .comments-spacess {
+        height: 220px;
+    }
+
+    #team .gallery-text {
+        font-size: 28px;
+    }
+
+    #team .text {
+        left: 9%;
+        top: 37%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-7%, -29%);
+    }
+
+    #team .btn-load-more::before {
+        content: '';
+        position: absolute;
+        background: #000000;
+        width: 20%;
+        height: 2px;
+        bottom: 20px;
+        left: 13px;
+    }
+
+    #team .read-text {
+        font-size: 15px;
+    }
+
+    .mt-30 {
+        margin-top: 6px;
+    }
+
+    .service-desc {
+        font-size: 13px;
+    }
+
+    #team .btn-load-more {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 42px;
+    }
+
+    .connect-text {
+        font-size: 21px;
+    }
+
+    .contact-text {
+        font-size: 26px;
+    }
+
+    #contact .contact-desc {
+        line-height: 24px;
+    }
+
+    .media-box-mt {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 800px) {
 }
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        padding: 6px 0px 6px 0px;
+    }
+
+    .menu-bg-color {
+        background: #000000;
+        height: auto;
+    }
+
+    .navbar-brand {
+        margin-right: 0rem;
+        margin-left: 3.4%;
+    }
+
+
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    #home {
+        margin-top: 90px;
+    }
+
+        #home .main-banner-text {
+            font-size: 30px;
+        }
+
+        #home .comments-space {
+            height: 332px;
+        }
+
+        #home .main-banner-desc {
+            font-size: 16px;
+        }
+
+    .mt--95 {
+        margin-top: -22px;
+    }
+
+
+
+    .btn-read-more {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 39px;
+    }
+
+        .btn-read-more::before {
+            width: 19%;
+            bottom: 22px;
+        }
+
+    .border-position {
+        padding: 29px 130px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        right: -51px;
+        top: 82px;
+    }
+
+    .feature-heading {
+        font-size: 26px;
+    }
+
+    .feature-desc {
+        line-height: 23px;
+    }
+
+    .gallery-text {
+        font-size: 24px;
+    }
+
+    #team .comments-spacess {
+        height: 220px;
+    }
+
+    #team .gallery-text {
+        font-size: 28px;
+    }
+
+    #team .text {
+        left: 9%;
+        top: 37%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-7%, -29%);
+    }
+
+    #team .btn-load-more::before {
+        content: '';
+        position: absolute;
+        background: #000000;
+        width: 20%;
+        height: 2px;
+        bottom: 20px;
+        left: 13px;
+    }
+
+    #team .read-text {
+        font-size: 15px;
+    }
+
+    .mt-30 {
+        margin-top: 6px;
+    }
+
+    .service-desc {
+        font-size: 13px;
+    }
+
+    #team .btn-load-more {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 42px;
+    }
+
+    .connect-text {
+        font-size: 21px;
+    }
+
+    .contact-text {
+        font-size: 26px;
+    }
+
+    #contact .contact-desc {
+        line-height: 24px;
+    }
+
+    .media-box-mt {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 415px) {
+    .content-setting {
+        padding: 75px 0 40px 0;
+    }
+
+    .active .nav-link::after {
+        width: 18%;
+    }
+
+    .menu-bg-color {
+        background: #000000;
+        height: auto;
+    }
+
+    .navbar {
+        padding: 6px 0px 6px 14px;
+    }
+
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    .navbar-brand {
+        margin-right: 9rem;
+        margin-left: -0.6%;
+    }
+
+    .navbar-nav {
+        margin-left: 115px;
+    }
+
+    .border-position {
+        padding: 29px 151px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        left: -4%;
+        bottom: -54px;
+        top: unset;
+    }
+
+    #home .owl-theme .owl-dots .owl-dot {
+        display: inline-block !important;
+        margin-left: 20px;
+    }
+
+        #home .owl-theme .owl-dots .owl-dot.active:before {
+            width: 9%;
+            left: 24%;
+            bottom: 38px;
+            transform: rotate(-45deg);
+            color: #ee8a3e;
+            margin-left: 7px;
+        }
+
+    .about-text {
+        font-size: 24px;
+    }
+
+    .media-btn-align {
+        text-align: center !important;
+    }
+
+    .service-desc {
+        font-size: 17px;
+    }
+
+    #team .read-text {
+        font-size: 18px;
+    }
+
+    .bg-banner-contact {
+        padding: 70px 25px;
+    }
+
+    #feature .read-text {
+        font-size: 18px;
+    }
+
+    .footer-font {
+        left: 12%;
+        font-size: 18px;
+    }
+
+    .nav-item {
+        padding: 11px 9px 6px 8px;
+    }
 }
 
 @media screen and (max-width: 411px) {
 }
 
 @media screen and (max-width: 376px) {
+    .navbar-brand {
+        margin-right: 6rem;
+        margin-left: 0%;
+    }
+
+    .navbar-nav {
+        margin-left: 100px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        left: -13%;
+    }
+
+    .border-position {
+        padding: 26px 134px;
+    }
+
+    .footer-font {
+        left: 16%;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 360px) {
+    .navbar-brand {
+        margin-right: 3rem;
+        margin-left: 0%;
+    }
+
+    .border-position {
+        padding: 26px 125px;
+    }
+
+    .qoutes-text {
+        font-size: 23px;
+    }
+
+    .contact-text {
+        font-size: 23px;
+    }
+
+    #team .comments-spacess {
+        height: 246px;
+    }
+
+    #contact .contact-desc {
+        font-size: 14px;
+    }
+
+    #feature .comments-spaces {
+        height: 195px;
+    }
+
+    .footer-font {
+        left: 16%;
+        font-size: 14px;
+    }
 }
 
 
 /*==================== Media Query For Land Scape Mode =====================*/
 @media screen and (max-width:1367px ) and (orientation: landscape) {
+    .navbar-brand {
+        margin-right: 1rem;
+    }
 }
 
 @media screen and (max-width: 1280px) and (orientation: landscape) {
+    #team .comments-spacess {
+        height: 285px;
+        overflow: auto;
+    }
+
+    .service-desc {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
+    .navbar-brand {
+        margin-right: -10rem;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        top: 160px;
+    }
+
+    .border-position {
+        padding: 29px 184px;
+    }
+
+    #team .text {
+        top: 57%;
+        left: 33%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-27%, -50%);
+    }
 }
 
 @media screen and (max-width: 824px) and (orientation: landscape) {
+    .content-setting {
+        padding: 75px 0 40px 0;
+    }
+
+    #home {
+        margin-top: 94px;
+    }
+
+        #home .main-banner-text {
+            font-size: 28px;
+        }
+
+    .active .nav-link::after {
+        width: 18%;
+    }
+
+    .menu-bg-color {
+        background: #000000;
+        height: auto;
+    }
+
+    .navbar {
+        padding: 6px 0px 6px 14px;
+    }
+
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    .navbar-brand {
+        margin-right: 9rem;
+        margin-left: -0.6%;
+    }
+
+    .navbar-nav {
+        margin-left: 115px;
+    }
+
+    .mt--95 {
+        margin-top: -20px;
+    }
+
+    .border-position {
+        padding: 24px 126px;
+    }
+
+    #home .main-banner-desc {
+        font-size: 16px;
+    }
+
+    #home .comments-space {
+        height: 334px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        top: 76px;
+    }
+
+    .feature-desc {
+        line-height: 24px;
+    }
+
+    .gallery-text {
+        font-size: 25px;
+    }
+
+    #team .gallery-text {
+        font-size: 26px;
+    }
+
+    #team .text {
+        left: 9%;
+        top: 37%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-7%, -29%);
+    }
+
+    #team .read-text {
+        font-size: 14px;
+    }
+
+    .mt-30 {
+        margin-top: 6px;
+    }
+
+    #team .text {
+        left: 5%;
+        top: 38%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-3%, -29%);
+    }
+
+    .service-desc {
+        font-size: 13px;
+    }
+
+    #team .overlay {
+        left: 11px;
+    }
+
+    #team .comments-spacess {
+        height: 228px;
+    }
+
+    .media-box-mt {
+        margin-top: 30px;
+    }
+
+    #contact .contact-desc {
+        line-height: 24px;
+    }
+
+    .footer-font {
+        left: 31%;
+    }
 }
 
 @media screen and (max-width: 812px) and (orientation: landscape) {
@@ -1622,6 +2334,37 @@ button:focus {
 }
 
 @media screen and (max-width: 736px) and (orientation: landscape) {
+    .border-position {
+        padding: 24px 216px;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        top: 177px;
+    }
+
+    .media-btn-align {
+        text-align: center !important;
+    }
+
+    .service-desc {
+        font-size: 16px;
+    }
+
+    .mt-30 {
+        margin-top: 24px;
+    }
+
+    #team .read-text {
+        font-size: 18px;
+    }
+
+    .service-desc {
+        font-size: 15px;
+    }
+
+    #feature .read-text {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 731px) and (orientation: landscape) {

@@ -90,7 +90,7 @@ $(function () {
                 hide_content +
                 '</span>' +
 
-                '<a href="" class="morelinkss read-text mt-30 mb-3 link-style " style="display:block;">' +
+                '<a href="" class="morelinkss read-text mt-30 mb-5 link-style " style="display:block;">' +
                 moretext +
                 '</a>' + '</span>';;
 
@@ -151,6 +151,8 @@ $(function () {
     $('#owl-one').owlCarousel({
         loop: true,
         margin: 0,
+        autoPlay: true,
+
         dots: false,
         nav: false,
         slideBy: 4,
@@ -199,7 +201,7 @@ $(function () {
         nav: false,
         slideBy: 1,
         item: 1,
-
+        center: true,
         responsiveClass: true,
         responsive: {
             0: {
@@ -214,8 +216,8 @@ $(function () {
             },
             600: {
                 items: 1,
-                dots: false,
-                nav: true
+                dots: true,
+                nav: false
             },
             768: {
                 items: 1,
