@@ -279,14 +279,19 @@ html, body {
     margin-top: 19px;
 }
 
-    #home .owl-theme .owl-dots .owl-dot.active::before {
+    #home .owl-theme .owl-dots .owl-dot.active:before {
+        color: #ee8a3e;
+    }
+
+    #home .owl-theme .owl-dots .owl-dot.active::after {
+        content: "";
         position: absolute;
         background: #000000;
-        height: 2px;
-        width: 90%;
+        height: 1px;
+        width: 80%;
         left: -12px;
+        margin: 10px 2px;
         transform: rotate(-45deg);
-        color: #ee8a3e;
     }
 
     #home .owl-theme .owl-dots .owl-dot span {
@@ -2012,6 +2017,37 @@ button:focus {
     }
 }
 
+@media screen and (max-width: 640px) {
+    .border-position {
+        padding: 29px 42%;
+    }
+
+    #home .owl-theme .owl-dots .owl-dot.active::after {
+        width: 5%;
+        margin: -32px 32%;
+    }
+
+    #home .owl-theme .owl-nav.disabled + .owl-dots {
+        left: -4%;
+        bottom: -54px;
+        top: unset;
+    }
+
+    #home .owl-theme .owl-dots .owl-dot {
+        display: inline-block !important;
+        margin-left: 20px;
+    }
+
+        #home .owl-theme .owl-dots .owl-dot.active:before {
+            width: 9%;
+            left: 24%;
+            bottom: 38px;
+            transform: rotate(-45deg);
+            color: #ee8a3e;
+            margin-left: 7px;
+        }
+}
+
 @media screen and (max-width: 415px) {
     .content-setting {
         padding: 75px 0 40px 0;
@@ -2048,8 +2084,13 @@ button:focus {
         padding: 29px 151px;
     }
 
+    #home .owl-theme .owl-dots .owl-dot.active::after {
+        width: 5%;
+        margin: -32px 35%;
+    }
+
     #home .owl-theme .owl-nav.disabled + .owl-dots {
-        left: -4%;
+        left: -13%;
         bottom: -54px;
         top: unset;
     }
